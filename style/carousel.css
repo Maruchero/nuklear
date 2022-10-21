@@ -1,12 +1,25 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css);
+
 .nuklear.carousel {
   --highlight: #333;
   --background: white;
   --offset: 2vw;
+  --duration: 0.5s;
+  --coverage: 60%;
 
-  max-height: 50vh;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  grid-template-rows: max-content max-content;
+
+  text-align: center;
+
+  overflow-x: hidden;
+}
+
+.carousel-container {  
+  width: var(--coverage);
   aspect-ratio: 4/3;
-  width: min(60vh, 60vw);
 
   position: relative;
 
@@ -15,17 +28,17 @@
   justify-content: center;
 }
 
-.carousel button.prev:hover,
-.carousel button.next:hover,
-.carousel button.prev:focus-visible,
-.carousel button.next:focus-visible {
+.nuklear.carousel button.prev:hover,
+.nuklear.carousel button.next:hover,
+.nuklear.carousel button.prev:focus-visible,
+.nuklear.carousel button.next:focus-visible {
   background: var(--background);
   box-shadow: 0 0 10px #0002;
   scale: 110%;
 }
 
-.carousel button.prev,
-.carousel button.next {
+.nuklear.carousel button.prev,
+.nuklear.carousel button.next {
   color: inherit;
 
   position: absolute;
@@ -41,26 +54,22 @@
   transition: all 0.3s ease;
 }
 
-.carousel .prev {
-  background-image: url(../static/img/chevron-left.svg);
-  background-size: cover;
-  background-position: center;
+.nuklear.carousel .prev {
   left: 0;
   translate: calc(-100% - var(--offset));
 }
 
-.carousel .next {
-  background-image: url(../static/img/chevron-right.svg);
+.nuklear.carousel .next {
   right: 0;
   translate: calc(100% + var(--offset));
 }
 
-.carousel .content {
+.nuklear.carousel .content {
   display: flex;
   justify-content: center;
 }
 
-.carousel .carousel-item {
+.nuklear.carousel .carousel-item {
   display: block;
   scale: 0;
   opacity: 0.3;
@@ -76,47 +85,41 @@
   background-size: cover;
   background-position: center;
 
-  transition: all 0.5s ease;
+  transition: all var(--duration) ease;
 }
 
-.carousel .carousel-item.focus {
+.nuklear.carousel .carousel-item.focus {
   scale: 1;
   opacity: 1;
   box-shadow: 0 0 10px #0003, 0 10px 20px #0001;
 }
 
-.carousel .carousel-item.prev {
+.nuklear.carousel .carousel-item.prev {
   translate: -70% -50%;
   scale: 0.5;
   opacity: 0.2;
-  z-index: -10;
 }
 
-.carousel .carousel-item.next {
+.nuklear.carousel .carousel-item.next {
   translate: 70% -50%;
   scale: 0.5;
   opacity: 0.2;
-  z-index: -10;
 }
 
-.carousel .bottom {
-  position: absolute;
-  bottom: 0;
-  translate: 0 100%;
-
+.nuklear.carousel .bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.carousel .status {
+.nuklear.carousel .status {
   padding-bottom: 8px;
   padding-top: 20px;
   display: flex;
   gap: 0.25rem;
 }
 
-.carousel .status .status-item {
+.nuklear.carousel .status .status-item {
   display: block;
   height: 0.5rem;
   aspect-ratio: 1;
@@ -124,14 +127,10 @@
   background: #ccc;
   box-shadow: 0 0 5px #0002;
 
-  transition: all 0.3s ease-out;
+  transition: all var(--duration) ease-out;
 }
 
-.carousel .status .status-item.focus {
+.nuklear.carousel .status .status-item.focus {
   aspect-ratio: 2;
   background: var(--highlight);
-}
-
-.carousel .caption {
-  margin: 0;
 }

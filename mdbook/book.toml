@@ -1,0 +1,17 @@
+[book]
+authors = ["Maruchero"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Nuklear documentation"
+description = "Documentation of the Nuklear library"
+
+[build]
+build-dir = "../docs/"
+
+[output.html]
+theme = "theme"
+default-theme = "coal"
+
+[output.html.search]
+enable = true

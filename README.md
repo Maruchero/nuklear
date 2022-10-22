@@ -1,4 +1,4 @@
-![](docs/src/img/nuklear-title.png)
+![](mdbook/src/img/nuklear-title.png)
 
 An awesome CSS and JS library to add to your website complicated stuff
 and quickly impress your boss.

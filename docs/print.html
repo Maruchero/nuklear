@@ -158,7 +158,22 @@ Responsive</li>
 Wide range of components</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="components"><a class="header" href="#components">Components</a></h1>
+<p>This library hasn't got many components yet, but they will be added soon.</p>
+<p>For now, here's a list of the components you can use.</p>
+<ul>
+<li><a href="./carousel.html">Carousel</a></li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="carousel"><a class="header" href="#carousel">Carousel</a></h1>
+<p>The <code>Carousel</code> is a cool component to visualize multiple 'cards' on the same layer.</p>
+<iframe src="./demos/carousel.html" title="Carousel demo" name="carouselDemo" id="carouselDemo"></iframe>
+<style>
+  iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: max-content;
+    border: 0;
+  }
+</style>
 <h2 id="importing"><a class="header" href="#importing">Importing</a></h2>
 <p>Import the library. Then copy this code in your html page.</p>
 <pre><code class="language-html">&lt;div id=&quot;carousel&quot; class=&quot;nuklear carousel&quot;&gt;
@@ -194,12 +209,14 @@ Wide range of components</li>
 <h2 id="customization"><a class="header" href="#customization">Customization</a></h2>
 <p>The <code>Carousel</code> component can be customized in many different ways. Carousel items will be put inside the <code>div.content</code> with <code>class=&quot;carousel-item&quot;</code>.</p>
 <p>You can add <code>style=&quot;background-image: url()&quot;</code> on a <code>.carousel-item</code> to make it an image slider.</p>
-<p>There are also some properties that you can modify to further modify your component. Maybe you will need to specify <code>!important</code> for some of them... 😅</p>
-<pre><code class="language-css">--highlight: #333;      /* Choose the color of the highlighted dot, at the bottom of the carousel */
---background: white;    /* Background color of the highlighted 'prev' and 'next' buttons */
---offset: 2vw;          /* Distance of the 'prev' and 'next' buttons from the carousel content */
---duration: 0.5s;       /* Sliding animation duration */
---coverage: 60%;        /* Width of the carousel content related to the parent */
+<p>There are also some properties that you can modify to further customize your component. Maybe you will need to specify <code>!important</code> for some of them... 😅</p>
+<pre><code class="language-css">.carousel {
+  --highlight: #333;      /* Choose the color of the highlighted dot, at the bottom of the carousel */
+  --background: white;    /* Background color of the highlighted 'prev' and 'next' buttons */
+  --offset: 2vw;          /* Distance of the 'prev' and 'next' buttons from the carousel content */
+  --duration: 0.5s;       /* Sliding animation duration */
+  --coverage: 60%;        /* Width of the carousel content related to the parent */
+}
 </code></pre>
 
                     </main>

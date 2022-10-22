@@ -1,5 +1,17 @@
 # Carousel
 
+The `Carousel` is a cool component to visualize multiple 'cards' on the same layer.
+
+<iframe src="./demos/carousel.html" title="Carousel demo" name="carouselDemo" id="carouselDemo"></iframe>
+<style>
+  iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: max-content;
+    border: 0;
+  }
+</style>
+
 ## Importing
 
 Import the library. Then copy this code in your html page.
@@ -46,12 +58,14 @@ The `Carousel` component can be customized in many different ways. Carousel item
 
 You can add `style="background-image: url()"` on a `.carousel-item` to make it an image slider.
 
-There are also some properties that you can modify to further modify your component. Maybe you will need to specify `!important` for some of them... 😅
+There are also some properties that you can modify to further customize your component. Maybe you will need to specify `!important` for some of them... 😅
 
 ```css
---highlight: #333;      /* Choose the color of the highlighted dot, at the bottom of the carousel */
---background: white;    /* Background color of the highlighted 'prev' and 'next' buttons */
---offset: 2vw;          /* Distance of the 'prev' and 'next' buttons from the carousel content */
---duration: 0.5s;       /* Sliding animation duration */
---coverage: 60%;        /* Width of the carousel content related to the parent */
+.carousel {
+  --highlight: #333;      /* Choose the color of the highlighted dot, at the bottom of the carousel */
+  --background: white;    /* Background color of the highlighted 'prev' and 'next' buttons */
+  --offset: 2vw;          /* Distance of the 'prev' and 'next' buttons from the carousel content */
+  --duration: 0.5s;       /* Sliding animation duration */
+  --coverage: 60%;        /* Width of the carousel content related to the parent */
+}
 ```

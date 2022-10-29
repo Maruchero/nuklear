@@ -1,4 +1,4 @@
-.circular-progress {
+.nuklear.circular-progress {
   --color: orchid;
   --percentage: 50;
   --background: #fff;
@@ -21,7 +21,7 @@
   justify-content: center;
 }
 
-.circular-progress::before {
+.nuklear.circular-progress::before {
   content: "";
   background: var(--color);
   width: 12.5%;
@@ -34,7 +34,7 @@
   transform: translateX(-50%);
 }
 
-.circular-progress .center {
+.nuklear.circular-progress .center {
   position: absolute;
   height: 75%;
   width: 75%;
@@ -46,7 +46,7 @@
   rotate: calc(var(--percentage) * 3.6deg);
 }
 
-.circular-progress .center::before {
+.nuklear.circular-progress .center::before {
   counter-reset: percentage var(--percentage);
   content: counter(percentage) "%";
 
@@ -59,7 +59,7 @@
   rotate: calc(var(--percentage) * -3.6deg);
 }
 
-.circular-progress .center::after {
+.nuklear.circular-progress .center::after {
   content: "";
   background: var(--color);
 

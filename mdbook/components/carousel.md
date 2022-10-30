@@ -5,7 +5,7 @@ icon: square
 
 The carousel component presents many elements or images in a clean slider.
 
-<iframe src="/demos/carousel.html" title="Carousel demo" name="carouselDemo" id="carouselDemo"></iframe>
+<iframe src="../../demos/carousel.html" title="Carousel demo" name="carouselDemo" id="carouselDemo"></iframe>
 <style>
   iframe {
     width: 100%;
@@ -87,5 +87,6 @@ Example:
 .carousel {
   --highlight: dodgerblue!important;
   --duration: 0.3s!important;
+  font-size: 1.2em;
 }
 ```

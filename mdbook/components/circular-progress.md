@@ -13,7 +13,7 @@ The circular progress component displays a percentage with a rounded colored bar
     border: 0;
   }
 </style>
-<iframe src="/demos/circular-progress.html" title="Circular progress demo"></iframe>
+<iframe src="../../demos/circular-progress.html" title="Circular progress demo"></iframe>
 <br/>
 
 ## Import

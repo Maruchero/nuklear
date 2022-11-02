@@ -15,6 +15,12 @@ class NkCarousel {
     }
     this.focus = 0;
 
+    // Transition
+    this.transition = false;
+    this.carousel.ontransitionend = () => {
+      this.transition = false;
+    };
+
     this.updateCarousel();
   }
 
@@ -42,13 +48,20 @@ class NkCarousel {
   }
 
   next() {
-    this.focus = (this.focus + 1) % this.carouselItems.length;
-    this.updateCarousel();
+    if (!this.transition) {
+      this.transition = true;
+      this.focus = (this.focus + 1) % this.carouselItems.length;
+      this.updateCarousel();
+    }
   }
 
   prev() {
-    this.focus =
-      (this.focus - 1 + this.carouselItems.length) % this.carouselItems.length;
-    this.updateCarousel();
+    if (!this.transition) {
+      this.transition = true;
+      this.focus =
+        (this.focus - 1 + this.carouselItems.length) %
+        this.carouselItems.length;
+      this.updateCarousel();
+    }
   }
 }

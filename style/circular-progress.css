@@ -1,92 +1,38 @@
-.nuklear.circular-progress {
-  --color: orchid;
-  --percentage: 50;
-  --background: #fff;
-  --text-color: #000;
-  --shadow-color: rgba(0, 0, 0, 0.23);
-  --shadow-spread: 8px;
+.circular-progress {
+  --shadow: 0 0 10px #0002;
+  --thickness: 12.5%;
+  --percentage: 65;
+  --color: blue;
+  --center-color: white;
+
+  aspect-ratio: 1;
+  width: 100%;
+  border-radius: 50%;
+
+  /* inner shadow */
+  box-shadow: inset var(--shadow);
 
   position: relative;
-  aspect-ratio: 1;
-  border-radius: 50%;
-
-  background: conic-gradient(
-    var(--color) calc(var(--percentage) * 3.6deg),
-    transparent calc(var(--percentage) * 3.6deg)
-  );
-  box-shadow: inset 0 0 var(--shadow-spread) var(--shadow-color);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.nuklear.circular-progress::before {
+.circular-progress::before {
+  /* center shadow */
   content: "";
-  background: var(--color);
-  width: 12.5%;
+  width: calc(100% - 2 * var(--thickness));
   aspect-ratio: 1;
   border-radius: 50%;
-
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.nuklear.circular-progress .center {
-  position: absolute;
-  height: 75%;
-  width: 75%;
-  border-radius: 50%;
-
-  background: var(--background);
-  box-shadow: 0 0 var(--shadow-spread) var(--shadow-color);
-  
-  rotate: calc(var(--percentage) * 3.6deg);
-}
-
-.nuklear.circular-progress .center::before {
-  counter-reset: percentage var(--percentage);
-  content: counter(percentage) "%";
-
-  color: var(--text-color);
 
   position: absolute;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  rotate: calc(var(--percentage) * -3.6deg);
+  z-index: -1;
+
+  box-shadow: var(--shadow);
 }
 
-.nuklear.circular-progress .center::after {
-  content: "";
-  background: var(--color);
-
-  width: calc(12.5% * 1.33333333);
-  aspect-ratio: 1;
-  border-radius: 50%;
-
-  position: absolute;
-  left: 50%;
-  translate: -50% -100%;
-}
-
-/* new 
-.circular-progress- {
-  --color: orchid;
-  --percentage: 50;
-  --shadow: rgba(0, 0, 0, 0.08);
-  --text-color: white;
-  --center-brightness: 0.97;
-  --p: 53.033%;
-  --shadow-spread: 7%;
-
-  position: relative;
-}
-
-.circular-progress- .progress {
-  position: relative;
+.circular-progress .bar {
+  /* progress bar */
   width: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -95,78 +41,78 @@
     var(--color) calc(var(--percentage) * 3.6deg),
     transparent calc(var(--percentage) * 3.6deg)
   );
-
-  -webkit-mask-image: radial-gradient(
-    at center,
-    transparent var(--p),
-    black var(--p)
-  );
-  mask-image: radial-gradient(
-    at center,
-    transparent var(--p),
-    black var(--p)
-  );
-  box-shadow: 0 0 10px var(--shadow);
 }
 
-.circular-progress-::before {
+.circular-progress .bar::before {
   content: "";
-  background: var(--color);
-  width: 12.5%;
+
+  display: block;
+  width: var(--thickness);
   aspect-ratio: 1;
   border-radius: 50%;
 
+  background: var(--color);
+
   position: absolute;
-  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  translate: -50%;
 }
 
-.circular-progress- .center {
+.circular-progress .after {
   position: absolute;
-  z-index: -1;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  rotate: calc(var(--percentage) * 3.6deg);
 
   height: 100%;
-  width: 100%;
-  border-radius: 50%;
 
-  background: radial-gradient(
-    at center,
-    transparent var(--p),
-    var(--shadow) var(--p),
-    transparent calc(var(--p) + var(--shadow-spread)),
-    transparent calc(70.7% - var(--shadow-spread)),
-    var(--shadow) 70.7%
-  );
+  rotate: calc(var(--percentage) * 3.6deg);
 }
 
-.circular-progress- .center::before {
-  counter-reset: percentage var(--percentage);
-  content: counter(percentage) "%";
+.circular-progress .after::after {
+  content: "";
 
-  color: var(--text-color);
+  display: block;
+  height: var(--thickness);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  background: var(--color);
+}
+
+.circular-progress .center {
+  width: calc(100% - 2 * var(--thickness));
+  aspect-ratio: 1;
+  border-radius: 50%;
 
   position: absolute;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  rotate: calc(var(--percentage) * -3.6deg);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--center-color);
 }
 
-.circular-progress- .center::after {
-  content: "";
-  background: var(--color);
-  width: 12.5%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+.circular-progress .center::before {
+  /* center cover */
+  counter-reset: percentage var(--percentage);
+  content: counter(percentage) "%";
 }
-*/
+
+.circular-progress.fractional {
+  --numerator: 40;
+  --denominator: 100;
+  --percentage: calc(100 / var(--denominator) * var(--numerator));
+}
+
+.circular-progress.fractional .center::before {
+  /* center cover */
+  counter-set: numerator var(--numerator);
+  counter-reset: denominator var(--denominator);
+  content: counter(numerator) "/" counter(denominator);
+}

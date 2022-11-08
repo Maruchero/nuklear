@@ -1,7 +1,8 @@
 .circular-progress {
   --shadow: 0 0 10px #0002;
   --thickness: 12.5%;
-  --percentage: 65;
+  --target: 50;
+  --percentage: var(--target);
   --color: blue;
   --center-color: white;
 
@@ -104,6 +105,7 @@
   content: counter(percentage) "%";
 }
 
+/* Fractional */
 .circular-progress.fractional {
   --numerator: 40;
   --denominator: 100;

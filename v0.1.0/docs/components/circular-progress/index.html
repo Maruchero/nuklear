@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-root" content="/nuklear/docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.721332077773">
+    <meta name="turbo-root" content="/nuklear/latest/docs">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.721337396427">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -15,29 +15,29 @@
     <meta name="description" content="The circular progress component displays a percentage with a rounded colored bar." />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://maruchero.github.io/nuklear/docs/components/circular-progress/" />
+    <link rel="canonical" href="https://maruchero.github.io/nuklear/latest/docs/components/circular-progress/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://maruchero.github.io/nuklear/docs/components/circular-progress/">
+    <meta property="og:url" content="https://maruchero.github.io/nuklear/latest/docs/components/circular-progress/">
     <meta property="og:title" content="Circular progress">
     <meta property="og:description" content="The circular progress component displays a percentage with a rounded colored bar.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://maruchero.github.io/nuklear/docs/components/circular-progress/">
+    <meta property="twitter:url" content="https://maruchero.github.io/nuklear/latest/docs/components/circular-progress/">
     <meta property="twitter:title" content="Circular progress">
     <meta property="twitter:description" content="The circular progress component displays a percentage with a rounded colored bar.">
 
-    <script>(function () { var el = document.documentElement, m = localStorage.getItem("/nuklear/docs/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+    <script>(function () { var el = document.documentElement, m = localStorage.getItem("/nuklear/latest/docs/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../static/icon.png" rel="icon" />
-    <link href="../../resources/css/retype.css?v=2.4.0.721332077773" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.721337396427" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.721332077773" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.721337396427" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.721332077773" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.721332077773" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.721337396427" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.721337396427" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -276,34 +276,44 @@
 </thead>
 <tbody>
 <tr>
+<td><code v-pre>--shadow</code></td>
+<td style="text-align: center;">0 0 10px #0002</td>
+<td>Progress bar inner shadow</td>
+</tr>
+<tr>
+<td><code v-pre>--ext-shadow</code></td>
+<td style="text-align: center;">none</td>
+<td>External shadow. Use this instead of <strong>box-shadow</strong></td>
+</tr>
+<tr>
+<td><code v-pre>--thickness</code></td>
+<td style="text-align: center;">12.5%</td>
+<td>Width of the progress bar</td>
+</tr>
+<tr>
+<td><code v-pre>--target</code></td>
+<td style="text-align: center;">50</td>
+<td>In animated progresses the percentage to achieve wen animated</td>
+</tr>
+<tr>
 <td><code v-pre>--percentage</code></td>
 <td style="text-align: center;">50</td>
-<td>The percentage to display</td>
+<td>The percentage to display. It&#x27;s also the initial value for animated progresses</td>
 </tr>
 <tr>
 <td><code v-pre>--color</code></td>
-<td style="text-align: center;">orchid</td>
+<td style="text-align: center;">blue</td>
 <td>The color of the progress bar</td>
 </tr>
 <tr>
-<td><code v-pre>--background</code></td>
-<td style="text-align: center;">#fff</td>
+<td><code v-pre>--center-color</code></td>
+<td style="text-align: center;">white</td>
 <td>Center background color</td>
 </tr>
 <tr>
 <td><code v-pre>--text-color</code></td>
-<td style="text-align: center;">#000</td>
+<td style="text-align: center;">black</td>
 <td>Text color</td>
-</tr>
-<tr>
-<td><code v-pre>--shadow-color</code></td>
-<td style="text-align: center;">rgba(0, 0, 0, 0.23)</td>
-<td>Color of the shadows</td>
-</tr>
-<tr>
-<td><code v-pre>--shadow-spread</code></td>
-<td style="text-align: center;">8px</td>
-<td>Blur of the shadows</td>
 </tr>
 </tbody>
 </table>

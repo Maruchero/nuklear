@@ -3,7 +3,7 @@
 An awesome CSS and JS library to add to your website complicated stuff
 and quickly impress your boss.
 
-Check the documentation [here](https://maruchero.github.io/nuklear/docs/).
+Check the documentation [here](https://maruchero.github.io/nuklear/latest/docs/).
 
 ## Features
 

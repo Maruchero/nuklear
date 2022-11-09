@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Circular progress</title>
 
-  <link rel="stylesheet" href="https://maruchero.github.io/nuklear/style/circular-progress.css">
+  <link rel="stylesheet" href="https://maruchero.github.io/nuklear/v0.1.0/style/circular-progress.css">
 
   <style>
     body {
-      --background: #333;
+      --background: #25252a;
       background: var(--background);
 
       box-sizing: border-box;
@@ -31,8 +31,9 @@
 
     .nuklear.circular-progress {
       width: 25vw;
-      --center-color: #333!important;
-      --text-color: #eee;
+      --center-color: var(--background)!important;
+      --text-color: #eee!important;
+      --ext-shadow: 0 0 10px #fff1;
     }
 
     .circular-progress:nth-child(1) {
@@ -52,7 +53,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="circular-progress">
+    <div class="nuklear circular-progress">
       <div class="bar">
         <div class="after"></div>
       </div>

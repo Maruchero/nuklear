@@ -1,22 +1,25 @@
-.circular-progress {
+.nuklear.circular-progress {
   --shadow: 0 0 10px #0002;
+  --ext-shadow: 0 0;
   --thickness: 12.5%;
   --target: 50;
   --percentage: var(--target);
   --color: blue;
   --center-color: white;
+  --text-color: black;
 
   aspect-ratio: 1;
   width: 100%;
   border-radius: 50%;
 
   /* inner shadow */
-  box-shadow: inset var(--shadow);
+  box-shadow: inset var(--shadow), var(--ext-shadow);
 
   position: relative;
+  color: var(--text-color);
 }
 
-.circular-progress::before {
+.nuklear.circular-progress::before {
   /* center shadow */
   content: "";
   width: calc(100% - 2 * var(--thickness));
@@ -32,7 +35,7 @@
   box-shadow: var(--shadow);
 }
 
-.circular-progress .bar {
+.nuklear.circular-progress .bar {
   /* progress bar */
   width: 100%;
   aspect-ratio: 1;
@@ -44,7 +47,7 @@
   );
 }
 
-.circular-progress .bar::before {
+.nuklear.circular-progress .bar::before {
   content: "";
 
   display: block;
@@ -59,7 +62,7 @@
   translate: -50%;
 }
 
-.circular-progress .after {
+.nuklear.circular-progress .after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -70,7 +73,7 @@
   rotate: calc(var(--percentage) * 3.6deg);
 }
 
-.circular-progress .after::after {
+.nuklear.circular-progress .after::after {
   content: "";
 
   display: block;
@@ -81,7 +84,8 @@
   background: var(--color);
 }
 
-.circular-progress .center {
+.nuklear.circular-progress .center {
+  box-sizing: border-box;
   width: calc(100% - 2 * var(--thickness));
   aspect-ratio: 1;
   border-radius: 50%;
@@ -97,22 +101,26 @@
   justify-content: center;
 
   background: var(--center-color);
+
+  text-align: center;
+  overflow: hidden;
+  padding: 0 10px;
 }
 
-.circular-progress .center::before {
+.nuklear.circular-progress .center::before {
   /* center cover */
   counter-reset: percentage var(--percentage);
   content: counter(percentage) "%";
 }
 
 /* Fractional */
-.circular-progress.fractional {
+.nuklear.circular-progress.fractional {
   --numerator: 40;
   --denominator: 100;
   --percentage: calc(100 / var(--denominator) * var(--numerator));
 }
 
-.circular-progress.fractional .center::before {
+.nuklear.circular-progress.fractional .center::before {
   /* center cover */
   counter-set: numerator var(--numerator);
   counter-reset: denominator var(--denominator);

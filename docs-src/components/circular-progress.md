@@ -42,12 +42,14 @@ Circular progress component's styling can be customized with some properties in 
 
 Property | Default | Description
 ---|:---:|---
-`--percentage` | 50 | The percentage to display
-`--color` | orchid | The color of the progress bar
-`--background` | #fff | Center background color
-`--text-color` | #000 | Text color
-`--shadow-color` | rgba(0, 0, 0, 0.23) | Color of the shadows
-`--shadow-spread` | 8px | Blur of the shadows
+`--shadow` | 0 0 10px #0002 | Progress bar inner shadow
+`--ext-shadow` | none | External shadow. Use this instead of **box-shadow**
+`--thickness` | 12.5% | Width of the progress bar
+`--target` | 50 | In animated progresses the percentage to achieve wen animated
+`--percentage` | 50 | The percentage to display. It's also the initial value for animated progresses
+`--color` | blue | The color of the progress bar
+`--center-color` | white | Center background color
+`--text-color` | black | Text color
 
 Sometimes, especially with external style files, `!important` might be needed.
 

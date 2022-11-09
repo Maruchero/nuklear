@@ -30,13 +30,13 @@
     }
 
     .nuklear.circular-progress {
-      width: 25%;
-      --background: #333;
+      width: 25vw;
+      --center-color: #333!important;
       --text-color: #eee;
     }
 
     .circular-progress:nth-child(1) {
-      --percentage: 80;
+      --percentage: 81;
       --color: dodgerblue;
     }
 
@@ -52,13 +52,22 @@
 </head>
 <body>
   <div class="container">
-    <div class="nuklear circular-progress">
+    <div class="circular-progress">
+      <div class="bar">
+        <div class="after"></div>
+      </div>
       <div class="center"></div>
     </div>
     <div class="nuklear circular-progress">
+      <div class="bar">
+        <div class="after"></div>
+      </div>
       <div class="center"></div>
     </div>
     <div class="nuklear circular-progress">
+      <div class="bar">
+        <div class="after"></div>
+      </div>
       <div class="center"></div>
     </div>
   </div>

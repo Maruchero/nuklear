@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maruchero.github.io/nuklear/docs/sitemap.xml.gz
+Sitemap: https://maruchero.github.io/nuklear/latest/docs/sitemap.xml.gz

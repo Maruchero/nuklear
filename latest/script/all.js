@@ -65,7 +65,7 @@ function animateNuklearCircularProgress(element, duration = 400, delay = 0) {
   if (initial === "") initial = 0;
 
   let frameTimeout = duration / (target - initial);
-  let percentage = initial;
+  let percentage = parseInt(initial);
 
   // Animate
   setTimeout(() => {
@@ -76,4 +76,3 @@ function animateNuklearCircularProgress(element, duration = 400, delay = 0) {
     }, frameTimeout);
   }, delay);
 }
-

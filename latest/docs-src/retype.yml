@@ -1,6 +1,6 @@
 input: .
 output: ../docs/
-url: https://maruchero.github.io/nuklear/latest/docs/
+url: .
 tags: [nuklear, garonzi marcello, library, css, js]
 
 branding:

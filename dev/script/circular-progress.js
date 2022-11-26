@@ -15,7 +15,10 @@ function animateNuklearCircularProgress(element, duration = 400, delay = 0) {
   // Animate
   setTimeout(() => {
     let loop = setInterval(() => {
-      if (percentage >= target) clearInterval(loop);
+      if (percentage >= target) {
+        clearInterval(loop);
+        element.dataset.animated = false;
+      }
       element.style.setProperty("--percentage", percentage);
       percentage++;
     }, frameTimeout);

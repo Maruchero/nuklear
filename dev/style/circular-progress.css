@@ -5,7 +5,7 @@
   --target: 50;
   --percentage: var(--target);
   --color: blue;
-  --center-color: white;
+  --center-color: transparent;
   --text-color: black;
 
   aspect-ratio: 1;
@@ -45,6 +45,15 @@
     var(--color) calc(var(--percentage) * 3.6deg),
     transparent calc(var(--percentage) * 3.6deg)
   );
+
+  -webkit-mask-image: url(../static/img/circle.svg);
+  mask-image: url(../static/img/circle.svg);
+  -webkit-mask-size: calc(200% - 4 * var(--thickness));
+  mask-size: calc(200% - 4 * var(--thickness));
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .nuklear.circular-progress .bar::before {

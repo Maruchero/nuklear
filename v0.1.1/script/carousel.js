@@ -15,6 +15,12 @@ class NkCarousel {
     }
     this.focus = 0;
 
+    // Transition
+    this.transition = false;
+    this.carousel.ontransitionend = () => {
+      this.transition = false;
+    };
+
     this.updateCarousel();
   }
 
@@ -42,38 +48,20 @@ class NkCarousel {
   }
 
   next() {
-    this.focus = (this.focus + 1) % this.carouselItems.length;
-    this.updateCarousel();
+    if (!this.transition) {
+      this.transition = true;
+      this.focus = (this.focus + 1) % this.carouselItems.length;
+      this.updateCarousel();
+    }
   }
 
   prev() {
-    this.focus =
-      (this.focus - 1 + this.carouselItems.length) % this.carouselItems.length;
-    this.updateCarousel();
+    if (!this.transition) {
+      this.transition = true;
+      this.focus =
+        (this.focus - 1 + this.carouselItems.length) %
+        this.carouselItems.length;
+      this.updateCarousel();
+    }
   }
 }
-
-function animateNuklearCircularProgress(element, duration = 400, delay = 0) {
-  // Check animated
-  if (element.dataset.animated === "true") return;
-  element.dataset.animated = true;
-
-  // Calculate animation data
-  let target = element.style.getPropertyValue("--target");
-  let initial = element.style.getPropertyValue("--percentage");
-  if (target === "") target = 50;
-  if (initial === "") initial = 0;
-
-  let frameTimeout = duration / (target - initial);
-  let percentage = initial;
-
-  // Animate
-  setTimeout(() => {
-    let loop = setInterval(() => {
-      if (percentage >= target) clearInterval(loop);
-      element.style.setProperty("--percentage", percentage);
-      percentage++;
-    }, frameTimeout);
-  }, delay);
-}
-

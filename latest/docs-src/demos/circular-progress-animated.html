@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Circular progress</title>
 
-  <link rel="stylesheet" href="https://maruchero.github.io/nuklear/v0.1.1/style/circular-progress.css">
-  <script src="https://maruchero.github.io/nuklear/v0.1.1/script/circular-progress.js"></script>
+  <link rel="stylesheet" href="https://maruchero.github.io/nuklear/v0.1.2/style/circular-progress.css">
+  <script src="https://maruchero.github.io/nuklear/v0.1.3/script/circular-progress.js"></script>
+  <!-- <script src="../../script/circular-progress.js"></script> -->
 
   <style>
     body {
@@ -56,6 +57,7 @@
       --center-color: var(--background) !important;
       --text-color: #eee !important;
       --ext-shadow: 0 0 10px #6661;
+      --percentage: 0;
     }
 
     .circular-progress:nth-child(1) {
@@ -83,7 +85,7 @@
       </div>
       <div class="center"></div>
     </div>
-    <div class="nuklear circular-progress" style="--target: 46">
+    <div class="nuklear circular-progress" style="--target: 43">
       <div class="bar">
         <div class="after"></div>
       </div>
@@ -106,13 +108,13 @@
         animation = true;
 
         for (let i = 0; i < progresses.length; i++) {
-          // progresses[i].style.setProperty("--percentage", 0);
-          animateNuklearCircularProgress(progresses[i], duration = 500, delay = (i * 400));
+          progresses[i].style.setProperty("--percentage", 0);
+          animateNuklearCircularProgress(progresses[i], duration = 500, delay = (i * 400) + 100);
         }
         
         setTimeout(() => {
           animation = false;
-        }, (progresses.length - 1) * 400 + 500);
+        }, (progresses.length - 1) * 400 + 700);
       }
     }
   </script>

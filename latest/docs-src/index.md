@@ -2,7 +2,8 @@
 label: Home
 icon: home
 title: Nuklear docs
-date: 2022-1-29
+date: 2022-10-22
+author: Maruchero
 ---
 # Welcome
 

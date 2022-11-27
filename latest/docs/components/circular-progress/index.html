@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.722788736886">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.722876252625">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -31,12 +31,12 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../static/icon.png" rel="icon" />
-    <link href="../../resources/css/retype.css?v=2.4.0.722788736886" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.722876252625" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.722788736886" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.722876252625" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.722788736886" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.722788736886" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.722876252625" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.722876252625" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -263,6 +263,37 @@
   &lt;div class=&quot;center&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 </doc-codeblock></div>
+<doc-anchor-target id="fractional-circular-progress">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fractional-circular-progress">#</doc-anchor-trigger>
+        <span>Fractional circular progress</span>
+    </h2>
+</doc-anchor-target>
+<iframe src="../../demos/circular-progress-fractional.html" title="Circular progress demo"></iframe>
+<br/>
+<p>Circular progress supports also fractions for more precise scoring, instead of using the <code v-pre>--percentage</code> property, <code v-pre>--numerator</code> and <code v-pre>--denominator</code> are modified to assing the progress value.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;nuklear circular-progress fractional&quot; style=&quot;--numerator: 64; --denominator: 120;&quot;&gt;
+    &lt;div class=&quot;bar&quot;&gt;
+      &lt;div class=&quot;after&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;center&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;nuklear circular-progress fractional&quot; style=&quot;--numerator: 50; --denominator: 100;&quot;&gt;
+    &lt;div class=&quot;bar&quot;&gt;
+      &lt;div class=&quot;after&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;center&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;nuklear circular-progress fractional&quot; style=&quot;--numerator: 1111; --denominator: 1222;&quot;&gt;
+    &lt;div class=&quot;bar&quot;&gt;
+      &lt;div class=&quot;after&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;center&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</doc-codeblock></div>
 <doc-anchor-target id="animated-circular-progress">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#animated-circular-progress">#</doc-anchor-trigger>
@@ -312,11 +343,11 @@
 </doc-anchor-target>
 <p>The circular progress component doesn&#x27;t need any script, so this is the minimal import required to run the component.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maruchero.github.io/nuklear/v0.1.1/style/circular-progress.css&quot;&gt;</code></pre>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maruchero.github.io/nuklear/v0.1.2/style/circular-progress.css&quot;&gt;</code></pre>
 </doc-codeblock></div>
 <p>Script is only needed when you want to animate the circular progress.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-markup"><code v-pre class="language-markup">&lt;script src=&quot;https://maruchero.github.io/nuklear/v0.1.1/script/circular-progress.js&quot;&gt;&lt;/script&gt;</code></pre>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;script src=&quot;https://maruchero.github.io/nuklear/v0.1.2/script/circular-progress.js&quot;&gt;&lt;/script&gt;</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="customizable-properties">
     <h3>
@@ -367,7 +398,7 @@
 </tr>
 <tr>
 <td><code v-pre>--center-color</code></td>
-<td style="text-align: center;">white</td>
+<td style="text-align: center;">transparent</td>
 <td>Center background color</td>
 </tr>
 <tr>

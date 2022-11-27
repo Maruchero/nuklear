@@ -15,13 +15,18 @@ Check the documentation [here](https://maruchero.github.io/nuklear/latest/docs/)
 
 ```
 Nuklear
-├─ docs        - documentation website
-├─ mdbook      - documentation markdown files
-├─ static      - mostly icons
-├─ style       - css files
-│  └─ all.css  - contains all the css
-├─ script      - js files
-└─ test        - you can insert your test pages here
+├─ docs                         - documentation website
+├─ docs-src                     - documentation markdown files
+├─ static                       - mostly icons
+├─ style                        - css files
+│  ├─ all.css                   - contains all the css
+│  ├─ carousel.css              - carousel css
+│  └─ circular progress.css     - circular progress css
+├─ script                       - js files
+│  ├─ all.js                   - contains all the script
+│  ├─ carousel.js              - carousel script
+│  └─ circular progress.js     - circular progress script
+└─ test                         - you can insert your test pages here
 ```
 
 ## Contributing

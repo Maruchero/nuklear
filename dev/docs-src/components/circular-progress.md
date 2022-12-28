@@ -116,13 +116,13 @@ animateNuklearCircularProgress(document.getElementById("myProgress"), duration=5
 The circular progress component doesn't need any script, so this is the minimal import required to run the component.
 
 ```html
-<link rel="stylesheet" href="https://maruchero.github.io/nuklear/v0.1.2/style/circular-progress.css">
+<link rel="stylesheet" href="https://maruchero.github.io/nuklear/v0.1.4/style/circular-progress.css">
 ```
 
 Script is only needed when you want to animate the circular progress.
 
 ```html
-<script src="https://maruchero.github.io/nuklear/v0.1.2/script/circular-progress.js"></script>
+<script src="https://maruchero.github.io/nuklear/v0.1.4/script/circular-progress.js"></script>
 ```
 
 ### Customizable properties

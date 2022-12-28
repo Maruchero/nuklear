@@ -20,8 +20,8 @@ The carousel component presents many elements or images in a clean slider.
 Those are the minimum import lines needed to run the carousel on the page.
 
 ```html
-<link rel="stylesheet" href="https://maruchero.github.io/nuklear/style/carousel.css">
-<script src="https://maruchero.github.io/nuklear/script/carousel.js"></script>
+<link rel="stylesheet" href="https://maruchero.github.io/nuklear/v1.0.4/style/carousel.css">
+<script src="https://maruchero.github.io/nuklear/v1.0.4/script/carousel.js"></script>
 ```
 
 The carousel template presents like this. This template is prefilled with four default items that can be removed. To see the complete list of possible changes go down to the [customization section](#customization).

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.722876252625">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.723286329256">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Getting started</title>
     <meta name="title" content="Getting started">
-    <meta name="description" content="This page dowsn't work." />
+    <meta name="description" content="Using the library in your website is super simple and only requires a few steps." />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://./getting-started/" />
@@ -20,22 +20,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://./getting-started/">
     <meta property="og:title" content="Getting started">
-    <meta property="og:description" content="This page dowsn't work.">
+    <meta property="og:description" content="Using the library in your website is super simple and only requires a few steps.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://./getting-started/">
     <meta property="twitter:title" content="Getting started">
-    <meta property="twitter:description" content="This page dowsn't work.">
+    <meta property="twitter:description" content="Using the library in your website is super simple and only requires a few steps.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/icon.png" rel="icon" />
-    <link href="../resources/css/retype.css?v=2.4.0.722876252625" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.723286329256" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.722876252625" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.723286329256" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.722876252625" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.723286329256" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../resources/js/prism.js?v=2.4.0.723286329256" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -222,7 +223,30 @@
         <span>Getting started</span>
     </h1>
 </doc-anchor-target>
-<p>This page dowsn&#x27;t work.</p>
+<p>Using the library in your website is super simple and only requires a few steps.</p>
+<p>You just need to insert those imports in the head of your html.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://maruchero.github.io/nuklear/v0.1.4/style/all.css&quot;&gt;
+&lt;script src=&quot;https://maruchero.github.io/nuklear/v0.1.4/script/all.js&quot;&gt;&lt;/script&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="offline-mode">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#offline-mode">#</doc-anchor-trigger>
+        <span>Offline mode</span>
+    </h3>
+</doc-anchor-target>
+<p>If you want to use the style and the script in offline mode, the simplest way to achieve this is to download the following files and put them inside the website folder. Then import the files and the game is done!</p>
+<p>style: <a href="https://maruchero.github.io/nuklear/v0.1.4/style/all.css">https://maruchero.github.io/nuklear/v0.1.4/style/all.css</a><br>
+script: <a href="https://maruchero.github.io/nuklear/v0.1.4/script/all.js">https://maruchero.github.io/nuklear/v0.1.4/script/all.js</a></p>
+<doc-anchor-target id="versions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#versions">#</doc-anchor-trigger>
+        <span>Versions</span>
+    </h3>
+</doc-anchor-target>
+<p>Nuklear has versioned style, script and documentation, in order to keep updating the library with new features and bug patches without interfering with users, so they don&#x27;t have to update their projects every time nuklear releases an update.</p>
+<p>The last version is <code v-pre>v0.1.4</code>.</p>
+<p>Nuklear is already available for users, although it&#x27;s still in hard development mode and its components aren&#x27;t finished yet. We decided to take this approach in order to open to user testing as soon as possible.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -289,6 +313,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Getting started", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Getting started", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>

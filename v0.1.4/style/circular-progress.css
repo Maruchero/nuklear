@@ -1,0 +1,137 @@
+.nuklear.circular-progress {
+  --shadow: 0 0 10px #0002;
+  --ext-shadow: 0 0;
+  --thickness: 12.5%;
+  --target: 50;
+  --percentage: var(--target);
+  --color: blue;
+  --center-color: transparent;
+  --text-color: black;
+
+  aspect-ratio: 1;
+  width: 100%;
+  border-radius: 50%;
+
+  /* inner shadow */
+  box-shadow: inset var(--shadow), var(--ext-shadow);
+
+  position: relative;
+  color: var(--text-color);
+}
+
+.nuklear.circular-progress::before {
+  /* center shadow */
+  content: "";
+  width: calc(100% - 2 * var(--thickness));
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+
+  box-shadow: var(--shadow);
+}
+
+.nuklear.circular-progress .bar {
+  /* progress bar */
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    var(--color) calc(var(--percentage) * 3.6deg),
+    transparent calc(var(--percentage) * 3.6deg)
+  );
+
+  -webkit-mask-image: url(../static/img/circle.svg);
+  mask-image: url(../static/img/circle.svg);
+  -webkit-mask-size: calc(200% - 4 * var(--thickness));
+  mask-size: calc(200% - 4 * var(--thickness));
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.nuklear.circular-progress .bar::before {
+  content: "";
+
+  display: block;
+  width: var(--thickness);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  background: var(--color);
+
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+}
+
+.nuklear.circular-progress .after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  height: 100%;
+
+  rotate: calc(var(--percentage) * 3.6deg);
+}
+
+.nuklear.circular-progress .after::after {
+  content: "";
+
+  display: block;
+  height: var(--thickness);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  background: var(--color);
+}
+
+.nuklear.circular-progress .center {
+  box-sizing: border-box;
+  width: calc(100% - 2 * var(--thickness));
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--center-color);
+
+  text-align: center;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.nuklear.circular-progress .center::before {
+  /* center cover */
+  counter-reset: percentage var(--percentage);
+  content: counter(percentage) "%";
+}
+
+/* Fractional */
+.nuklear.circular-progress.fractional {
+  --numerator: 40;
+  --denominator: 100;
+  --percentage: calc(100 / var(--denominator) * var(--numerator));
+}
+
+.nuklear.circular-progress.fractional .center::before {
+  /* center cover */
+  counter-set: numerator var(--numerator);
+  counter-reset: denominator var(--denominator);
+  content: counter(numerator) "/" counter(denominator);
+}

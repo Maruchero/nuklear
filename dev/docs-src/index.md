@@ -18,8 +18,8 @@ Nuklear is fully compatible with any kind of website, but it can be imported and
 Here it is the default import lines for websites. These lines have to be added to the head of the HTML page.
 
 ```html
-<link rel="stylesheet" href="https://maruchero.github.io/nuklear/style/all.css">
-<script src="https://maruchero.github.io/nuklear/script/all.js"></script>
+<link rel="stylesheet" href="https://maruchero.github.io/nuklear/v0.1.4/style/all.css">
+<script src="https://maruchero.github.io/nuklear/v0.1.4/script/all.js"></script>
 ```
 
 Script is not always necessary for every component. Some imports can be exclude in order to improve performance. Read more on specific imports [here](./getting-started.md).
@@ -35,6 +35,6 @@ A complete list of the components [here](./components/).
 
 ## Support
 
-```
-No contact information...
-```
+Feel free to contact me:<br>
+:icon-mail: [mail](mailto:marce.gnz303@gmail.com)<br>
+:icon-person: [instagram](https://instagram.com/marcellogaronzi)<br>

@@ -3,17 +3,16 @@
   import Sidenav from "$components/Sidenav.svelte";
   import "./light-theme.css";
 
-  let sidenav = {
-    hidden: false,
-  };
+  let showSidenav = true;
 </script>
 
 <div class="app">
   <div class="nav">
-    <Topnav />
+    <Topnav bind:showSidenav={showSidenav} />
   </div>
-  <Sidenav {...sidenav} />
+  <Sidenav shown={showSidenav} />
   <main>
+    showSidenav: {showSidenav}
     <slot />
   </main>
 </div>

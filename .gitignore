@@ -1,5 +1,7 @@
 # Test
 */test/
+*/docs-src/
+!dev/docs-src/
 
 # Ignore
 */.*

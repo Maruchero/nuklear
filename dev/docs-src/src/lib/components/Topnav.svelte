@@ -1,4 +1,6 @@
 <script>
+  import logo from "$img/logo-dark.png";
+
   export let showSidenav = true;
   export let alwaysShowSidenav = true;
 
@@ -11,12 +13,14 @@
 
 <nav>
   <div class="left">
-    <button class="item bi bi-list" on:click={toggleSidenav}></button>
+    <button class="item bi bi-list" on:click={toggleSidenav} />
   </div>
-  <h3 class="logo m-0">LOGO HERE</h3>
+  <div class="logo">
+    <img src={logo} alt="Nuklear" />
+  </div>
   <div class="right">
-    <a class="item bi bi-github" href="./"><i></i></a>
-    <a class="item bi bi-moon" href="./"><i></i></a>
+    <a class="item bi bi-github" href="./"><i /></a>
+    <a class="item bi bi-moon" href="./"><i /></a>
   </div>
 </nav>
 
@@ -64,5 +68,16 @@
 
   .item.bi {
     font-size: 1.5em;
+  }
+
+  /* Logo */
+  .logo {
+    height: 4rem;
+    max-height: 100%;
+    padding: 10px;
+  }
+
+  img {
+    height: 100%;
   }
 </style>

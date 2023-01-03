@@ -13,18 +13,17 @@
   </div>
   <Sidenav shown={showSidenav} bind:alwaysShown={alwaysShowSidenav} />
   <main>
-    showSidenav: {showSidenav}<br />
-    alwaysShowSidenav: {alwaysShowSidenav}
     <slot />
   </main>
 </div>
 
 <style>
   .app {
+    width: 100%;
     height: 100vh;
 
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: min-content auto;
     grid-template-rows: max-content auto;
   }
 
@@ -34,6 +33,7 @@
   }
 
   main {
+    width: 100%;
     padding: 20px;
     overflow-y: auto;
   }

@@ -6,7 +6,6 @@
 
   function toggleSidenav() {
     showSidenav = !showSidenav;
-    console.log("showSidenav:", showSidenav);
   }
 </script>
 

@@ -1,5 +1,8 @@
 <script>
   export let showSidenav = true;
+  export let alwaysShowSidenav = true;
+
+  $: showSidenav = alwaysShowSidenav;
 
   function toggleSidenav() {
     showSidenav = !showSidenav;

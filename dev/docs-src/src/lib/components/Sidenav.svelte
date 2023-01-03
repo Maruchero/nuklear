@@ -9,8 +9,8 @@
   
   // Instance variables
   export let shown = true;
-  let alwaysShown;
-  $: alwaysShown = windowWidth > 900;
+  export let alwaysShown = true;
+  $: alwaysShown = (windowWidth ?? 1000) > 900;
   $: shown = alwaysShown;
 
   // Component width
@@ -18,6 +18,7 @@
   $: style = {
     "width": shown ? width.open : width.close,
   }
+  console.log(style);
 
   // Functions
   function toggle() {
@@ -28,7 +29,7 @@
   }
 </script>
 
-<div class="container p-0" style="width: {style.width}">
+<div class="container p-0" style="width: {style?.width ?? width.open}">
   <div class="p-3">
     <h1>Sidenav</h1>
   
@@ -48,5 +49,7 @@
     border-right: 1px solid #ccc;
 
     overflow-x: hidden;
+
+    transition: width .3s ease-out;
   }
 </style>

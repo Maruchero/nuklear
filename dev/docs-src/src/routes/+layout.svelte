@@ -4,15 +4,17 @@
   import "./light-theme.css";
 
   let showSidenav = true;
+  let alwaysShowSidenav = true;
 </script>
 
 <div class="app">
   <div class="nav">
-    <Topnav bind:showSidenav={showSidenav} />
+    <Topnav bind:showSidenav alwaysShowSidenav={alwaysShowSidenav} />
   </div>
-  <Sidenav shown={showSidenav} />
+  <Sidenav shown={showSidenav} bind:alwaysShown={alwaysShowSidenav} />
   <main>
-    showSidenav: {showSidenav}
+    showSidenav: {showSidenav}<br />
+    alwaysShowSidenav: {alwaysShowSidenav}
     <slot />
   </main>
 </div>
